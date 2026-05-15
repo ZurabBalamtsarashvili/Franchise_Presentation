@@ -50,8 +50,9 @@
     border-bottom:1px solid var(--black);
     pointer-events:none;
   }
-  .topbar .brand{font-weight:700;letter-spacing:.18em;font-size:12px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
-  .topbar .brand::before{content:"";width:10px;height:10px;background:var(--orange);display:inline-block}
+  .logo{display:block;height:28px;width:auto}
+  .logo--light{filter:brightness(0) invert(1)}
+  .topbar .brand{display:flex;align-items:center;pointer-events:auto}
   .topbar .meta{font-size:11px;letter-spacing:.2em;color:var(--black);text-transform:uppercase;font-weight:500}
 
   /* ───────── side nav ───────── */
@@ -389,10 +390,9 @@
   .closing h2 .hl{color:var(--orange)}
   .closing .signature{
     margin-top:60px;padding-top:28px;border-top:2px solid var(--white);
-    letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:#a8a8a8;font-weight:600;
-    width:100%;display:flex;justify-content:space-between;align-items:center;
+    width:100%;display:flex;justify-content:flex-end;align-items:center;
   }
-  .closing .signature .right{color:var(--orange)}
+  .closing .signature .logo{height:32px}
 
   /* anim */
   [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
@@ -430,7 +430,7 @@
 <div class="progress" id="progress"></div>
 
 <div class="topbar">
-  <div class="brand">MEAMA · COLLECT</div>
+  <div class="brand"><img class="logo" src="assets/collect-logo.svg" alt="Meama Collect" width="146" height="45"></div>
   <div class="meta">FRANCHISE / 2026</div>
 </div>
 
@@ -854,8 +854,7 @@
     <h2>ერთობლივი<br><span class="hl">ბრენდის</span><br>მშენებლობა</h2>
     <div class="color-bar" style="margin-top:60px;border-color:var(--white)"><span></span><span></span><span></span><span></span><span></span></div>
     <div class="signature">
-      <span>შეხვედრის პრეზენტაცია · 2026</span>
-      <span class="right">MEAMA · COLLECT</span>
+      <img class="logo logo--light" src="assets/collect-logo.svg" alt="Meama Collect" width="146" height="45">
     </div>
   </div>
 </section>
